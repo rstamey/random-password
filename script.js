@@ -20,14 +20,14 @@ function generatePassword() {
   // ask what chars
   var includeLowercase = confirm("Include lowercase characters in the password?");
   var includeUppercase = confirm("Include uppercase characters in the password?");
-  var includeNumeric = confirm("Include number characters in the password?");
+  var includeNumbers = confirm("Include number characters in the password?");
   var includeSpecial = confirm("Include special characters in the password?");
   // char choses
    while (!includeLowercase && !includeUppercase && !includeNumbers && !includeSpecial) {
     alert("You must select at least one character type. Please try again.");
     includeLowercase = confirm("Include lowercase characters in the password?");
     includeUppercase = confirm("Include uppercase characters in the password?");
-    includeNumbers = confirm("Include numeric characters in the password?");
+    includeNumbers = confirm("Include number characters in the password?");
     includeSpecial = confirm("Include special characters in the password?");
   }
   // define chars
@@ -39,7 +39,7 @@ function generatePassword() {
   var characterSet = "";
   if (includeLowercase) { characterSet += lowercase; }
   if (includeUppercase) { characterSet += uppercase; }
-  if (includeNumeric) { characterSet += numbers; }
+  if (includeNumbers) { characterSet += numbers; }
   if (includeSpecial) { characterSet += special; }
   // generate the password
   var password = "";
